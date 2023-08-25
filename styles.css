@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+html {
+    max-height: 100%;
+}
+
 body {
+    position: absolute;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    max-height: 1260px;
     display: grid;
     grid-template-columns: 300px repeat(3 , 1fr);
     grid-template-rows: 200px 3fr;
@@ -44,37 +48,43 @@ body {
     border-radius: 8px;
     height: 1.2rem;
     border: none;
-    background-color: rgb(222, 224, 224);
+    background-color: rgb(236, 236, 236);
     align-self: center;
     flex: 1;
     padding-left: 5px;
 }
 
 #searchbar:focus {
-    outline: 1px solid #e2e8f0;
+    outline: 1px solid #5b9aec;
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 4;
-    color: rgb(255, 255, 255);
-    background-color: #9F73AB;
+    color: rgb(212, 210, 210);
+    background-color: #29212b;
 }
 
-.sidebar > h1 {
+.sidebar > h1, ul {
+    justify-items: center;
+    justify-content: end;
     padding-bottom: 50px;
 }
 
 ul {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 100px;
     font-size: 1.5rem;
     list-style: none;
 }
 
 li {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     padding: .3rem;
 }
 
@@ -110,7 +120,6 @@ a {
     background-color: white;
     box-shadow: 0px 2px 5px grey;
     border-radius: 8px;
-    border-left: #9F73AB 6px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,11 +128,15 @@ a {
     overflow: auto;
 }
 
+.cards:hover {
+    box-shadow: 0px 4px 8px grey;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
 .announcements {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0px 2px 5px grey;
@@ -133,6 +146,7 @@ a {
 
 h3 {
     text-align: center;
+    color: #29212b;
 }
 
 .trending {
@@ -147,8 +161,11 @@ h3 {
     grid-row-end: 3;
     overflow: auto;
 }
+.greeting {
+    text-align: left;
+}
 
-.livefeed {
+.liveFeed {
     border-bottom: 1px solid grey;
 }
 
@@ -157,22 +174,22 @@ h3 {
     padding-top: 20px;
 }
 
-.announcements > h5 {
+.announcements > h5, p {
     text-align: center;
+    flex: 1;
 }
 
 .announcements > p {
     border-bottom: 1px solid rgb(206, 199, 199);
     padding: 8px;
-    text-align: center;
 }
 
 .icons {
     height: 1.5rem;
     display: inline-block;
     vertical-align: middle;
-    align-self: center;
     padding-right: 8px;
+    
 }
 
 .icons:hover {
@@ -180,17 +197,21 @@ h3 {
 }
 
 #sidebar-title {
-    padding-left: 15px;
+    text-rendering: geometricPrecision;
+    padding: 15px;
+    display: flex;
+    align-self: center;
+
 }
 
 #profile-pic {
    height: 3rem; 
    border-radius: 30px;
-   border: 3px solid #9F73AB;
+   box-shadow: 0px 2px 5px grey;
 }
 
 #main-profile-pic {
-    border: 5px solid #9F73AB;
+    box-shadow: 0px 2px 5px grey;
     height: 6rem;
     border-radius: 50px;
     margin-right: 15px;
@@ -212,6 +233,7 @@ h3 {
     border: none;
     border-radius: 15px;
     margin: 10px;
+    box-shadow: 0px 3px 5px grey;
 }
 
 .action-buttons:hover {
@@ -220,4 +242,8 @@ h3 {
 
 .action-buttons:active {
     transform: scale(1);
+}
+li:hover {
+    text-decoration: underline;
+    transform: scale(1.02);
 }
