@@ -140,6 +140,11 @@ a {
     align-items: center;
     padding: 40px;
     overflow: auto;
+    color: rgb(128, 106, 77);
+}
+
+.cards > h3 {
+    color: rgb(114, 90, 58);
 }
 
 .cards:hover {
