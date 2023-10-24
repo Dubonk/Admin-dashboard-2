@@ -22,14 +22,18 @@ body {
 }
 
 .top-header {
+    width: 100%;
     margin-top: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.searchStuff {
+    width: 100%;
 }
 
 .profile-pic {
-    position: fixed;
-    right: 0;
     margin-right: 35px;
     padding-left: 100px;
     font-weight: 700;
@@ -58,7 +62,7 @@ body {
     border: none;
     background-color: rgb(255, 255, 255);
     align-self: center;
-    width: 30%;
+    width: 60%;
     padding-left: 5px;
 }
 
@@ -134,18 +138,18 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, minmax(300px, 350px));
     gap: 25px;
+    
 }
 
 .cards {
     background-color: rgb(226, 202, 150);
-    box-shadow: 0px 2px 5px grey;
+    box-shadow: 0px 2px 10px grey;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 40px;
-    overflow: auto;
+    padding: 15px;
     color: rgb(128, 106, 77);
 }
 
@@ -290,4 +294,20 @@ h3 {
 li:hover {
     text-decoration: underline;
     transform: scale(1.02);
+}
+
+.projectImgs {
+    width: 350px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #e5e5e5;
+    width: 200%;
+    text-align: center;
+}
+
+footer > a {
+    font-weight: 100;
+    color: black;
 }
