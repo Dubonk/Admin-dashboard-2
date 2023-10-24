@@ -80,7 +80,8 @@ body {
 }
 
 .support-links {
-    gap: 50px;
+    gap: 10px;
+    font-size: 16px;
 }
 
 .sidebar > h1, ul {
